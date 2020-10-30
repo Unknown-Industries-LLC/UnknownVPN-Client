@@ -101,7 +101,7 @@ namespace UnknownVPN
             var result = UnknownAPI.UpdateCheck();
             if (result.Item1)
             {
-                using (var client = new WebClient())
+                using (var client = new WebClient()) 
                 {
                     var downloadpath = Path.GetTempFileName();
                     var executingpath = Assembly.GetExecutingAssembly().Location;
