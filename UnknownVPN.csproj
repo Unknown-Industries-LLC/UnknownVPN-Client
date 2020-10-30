@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6987F872-846E-4972-81F9-F60DD3C6EEB5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>UnknownVPN</RootNamespace>
+    <AssemblyName>UnknownVPN</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>2_YIV_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IUnknownComs.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\NotifyUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NotifyUI.Designer.cs">
+      <DependentUpon>NotifyUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LoginUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LoginUI.Designer.cs">
+      <DependentUpon>LoginUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Forms\ClientUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ClientUI.Designer.cs">
+      <DependentUpon>ClientUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RegisterUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RegisterUI.Designer.cs">
+      <DependentUpon>RegisterUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="API\Models\ServerObject.cs" />
+    <Compile Include="API\UnknownAPI.cs" />
+    <EmbeddedResource Include="Forms\NotifyUI.resx">
+      <DependentUpon>NotifyUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LoginUI.resx">
+      <DependentUpon>LoginUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Forms\ClientUI.resx">
+      <DependentUpon>ClientUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RegisterUI.resx">
+      <DependentUpon>RegisterUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\95435083_656421281601774_2434322025813988754_n.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images44.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext357373890350017.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext357374245568702.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext357374314061431.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-registration-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-window-16%282%29.png" />
+    <None Include="Resources\icons8-close-window-16%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-exit-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext359199140269206.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\instagram.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cogwheel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-exit-161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\send.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-send-comment-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-email-send-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext359493604828510.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext359493755231136.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\discord.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\youtube.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cooltext359523504635125.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="2_YIV_icon.ico" />
+    <None Include="Resources\error.png" />
+    <None Include="Resources\icons8_cancel_25px.png" />
+    <None Include="Resources\info.png" />
+    <None Include="Resources\success.png" />
+    <None Include="Resources\warning.png" />
+    <None Include="Resources\checkmark1.png" />
+    <None Include="Resources\tick%281%29.png" />
+    <None Include="Resources\close.png" />
+    <None Include="Resources\checkmark.png" />
+    <None Include="Resources\icons8-refresh-161.png" />
+    <None Include="Resources\icons8-refresh-16.png" />
+    <None Include="Resources\iconfinder_reload-refresh-arrow-repeat_2937371.png" />
+    <None Include="Resources\baseline_autorenew_black_18pt_1x.png" />
+    <None Include="Resources\discordnanner.png" />
+    <None Include="Resources\images.png" />
+    <None Include="Resources\2_YIV_icon.ico" />
+    <None Include="Resources\icons8-high-importance-16.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
