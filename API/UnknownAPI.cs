@@ -22,7 +22,7 @@ namespace UnknownVPN.API
         {
             if (string.IsNullOrEmpty(fingerPrint))
             {
-                fingerPrint = GetHash("CPU >> " + cpuId() + "\nBIOS >> " + biosId() + "\nBASE >> " + baseId()); //+"\nDISK >> "+ diskId() + "\nVIDEO >> " + videoId() + "\nMAC >> " + macId());
+                fingerPrint = GetHash("CPU >> " + CPUId() + "\nBIOS >> " + BiosId() + "\nBASE >> " + BaseId());
             }
             return fingerPrint;
         }
@@ -56,36 +56,7 @@ namespace UnknownVPN.API
             return s;
         }
         #region Original Device ID Getting Code
-        //Return a hardware identifier
-        private static string identifier
-    (string wmiClass, string wmiProperty, string wmiMustBeTrue)
-        {
-            string result = "";
-            System.Management.ManagementClass mc =
-    new System.Management.ManagementClass(wmiClass);
-            System.Management.ManagementObjectCollection moc = mc.GetInstances();
-            foreach (System.Management.ManagementObject mo in moc)
-            {
-                if (mo[wmiMustBeTrue].ToString() == "True")
-                {
-                    //Only get the first one
-                    if (result == "")
-                    {
-                        try
-                        {
-                            result = mo[wmiProperty].ToString();
-                            break;
-                        }
-                        catch
-                        {
-                        }
-                    }
-                }
-            }
-            return result;
-        }
-        //Return a hardware identifier
-        private static string identifier(string wmiClass, string wmiProperty)
+        private static string Identifier(string wmiClass, string wmiProperty)
         {
             string result = "";
             System.Management.ManagementClass mc = new System.Management.ManagementClass(wmiClass);
@@ -107,69 +78,44 @@ namespace UnknownVPN.API
             }
             return result;
         }
-        private static string cpuId()
+        private static string CPUId()
         {
             //Uses first CPU identifier available in order of preference
             //Don't get all identifiers, as it is very time consuming
-            string retVal = identifier("Win32_Processor", "UniqueId");
+            string retVal = Identifier("Win32_Processor", "UniqueId");
             if (retVal == "") //If no UniqueID, use ProcessorID
             {
-                retVal = identifier("Win32_Processor", "ProcessorId");
+                retVal = Identifier("Win32_Processor", "ProcessorId");
                 if (retVal == "") //If no ProcessorId, use Name
                 {
-                    retVal = identifier("Win32_Processor", "Name");
+                    retVal = Identifier("Win32_Processor", "Name");
                     if (retVal == "") //If no Name, use Manufacturer
                     {
-                        retVal = identifier("Win32_Processor", "Manufacturer");
+                        retVal = Identifier("Win32_Processor", "Manufacturer");
                     }
                     //Add clock speed for extra security
-                    retVal += identifier("Win32_Processor", "MaxClockSpeed");
+                    retVal += Identifier("Win32_Processor", "MaxClockSpeed");
                 }
             }
             return retVal;
         }
         //BIOS Identifier
-        private static string biosId()
+        private static string BiosId()
         {
-            return identifier("Win32_BIOS", "Manufacturer")
-            + identifier("Win32_BIOS", "SMBIOSBIOSVersion")
-            + identifier("Win32_BIOS", "IdentificationCode")
-            + identifier("Win32_BIOS", "SerialNumber")
-            + identifier("Win32_BIOS", "ReleaseDate")
-            + identifier("Win32_BIOS", "Version");
-        }
-        //Main physical hard drive ID
-        private static string diskId()
-        {
-            return identifier("Win32_DiskDrive", "Model")
-            + identifier("Win32_DiskDrive", "Manufacturer")
-            + identifier("Win32_DiskDrive", "Signature")
-            + identifier("Win32_DiskDrive", "TotalHeads");
+            return Identifier("Win32_BIOS", "Manufacturer")
+            + Identifier("Win32_BIOS", "SMBIOSBIOSVersion")
+            + Identifier("Win32_BIOS", "IdentificationCode")
+            + Identifier("Win32_BIOS", "SerialNumber")
+            + Identifier("Win32_BIOS", "ReleaseDate")
+            + Identifier("Win32_BIOS", "Version");
         }
         //Motherboard ID
-        private static string baseId()
+        private static string BaseId()
         {
-            return identifier("Win32_BaseBoard", "Model")
-            + identifier("Win32_BaseBoard", "Manufacturer")
-            + identifier("Win32_BaseBoard", "Name")
-            + identifier("Win32_BaseBoard", "SerialNumber");
-        }
-        //Primary video controller ID
-        private static string videoId()
-        {
-            return identifier("Win32_VideoController", "DriverVersion")
-            + identifier("Win32_VideoController", "Name");
-        }
-        //First enabled network card ID
-        private static string macId()
-        {
-            return identifier("Win32_NetworkAdapterConfiguration",
-    "MACAddress", "IPEnabled");
-        }
-
-        public void Dispose()
-        {
-            throw new NotImplementedException();
+            return Identifier("Win32_BaseBoard", "Model")
+            + Identifier("Win32_BaseBoard", "Manufacturer")
+            + Identifier("Win32_BaseBoard", "Name")
+            + Identifier("Win32_BaseBoard", "SerialNumber");
         }
         #endregion
     }
@@ -318,10 +264,6 @@ namespace UnknownVPN.API
             {
                 ProcessCommand($"vpncmd.exe /CLIENT localhost /CMD AccountCreate {server.SoftetherConnectionName}/SERVER:{server.IP}:443 /HUB:VPN /USERNAME:{vpnUser} /NICNAME:VPN");
             }
-        }
-        public static string FromBase64ToSTR(string input)
-        {
-            return Encoding.UTF8.GetString(Convert.FromBase64String(input));
         }
         public static Tuple<bool, string> Login(string user, string pass, string uID)
         {

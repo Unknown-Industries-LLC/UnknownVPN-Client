@@ -76,26 +76,33 @@ namespace UnknownVPN
             catch (Exception LOL)
             {
                 Console.Write(LOL.Message);
-
+            }
+        }
+        private void MovePanel(Panel paneltomove)
+        {
+            foreach (var panel in Controls.OfType<Panel>().Where(x => x.Tag?.ToString() == "tabobject"))
+            {
+                if(panel != paneltomove)
+                {
+                    panel.Location = new Point(1111, 1111);
+                }
+                else
+                {
+                    panel.Location = mPanel.Location = new Point(12, 83);
+                }
             }
         }
         private void tab1_Click(object sender, EventArgs e)
         {
-            mPanel.Location = new Point(12, 83);
-            ePanel.Location = new Point(1111, 1111);
-            sPanel.Location = new Point(3333, 3333);
+            MovePanel(mPanel);
         }
         private void tab2_Click(object sender, EventArgs e)
         {
-            ePanel.Location = new Point(12, 83);
-            mPanel.Location = new Point(2222, 2222);
-            sPanel.Location = new Point(3333, 3333);
+            MovePanel(ePanel);
         }
         private void tab3_Click(object sender, EventArgs e)
         {
-            sPanel.Location = new Point(12, 83);
-            mPanel.Location = new Point(2222, 2222);
-            ePanel.Location = new Point(1111, 1111);
+            MovePanel(sPanel);
         }
         #endregion   
         #region Functions - Connect, Disconnect ect

@@ -68,9 +68,11 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.eR_Toggle2 = new Eternal_Romance.UK_Toggle();
             this.iplabel = new System.Windows.Forms.Label();
             this.ipBox = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
+            this.eR_Toggle1 = new Eternal_Romance.UK_Toggle();
             this.label14 = new System.Windows.Forms.Label();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.appver = new System.Windows.Forms.Label();
@@ -86,8 +88,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tab3 = new System.Windows.Forms.Button();
             this.vpnFlags = new System.Windows.Forms.ImageList(this.components);
-            this.eR_Toggle2 = new Eternal_Romance.UK_Toggle();
-            this.eR_Toggle1 = new Eternal_Romance.UK_Toggle();
             this.mPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -130,6 +130,7 @@
             this.mPanel.Name = "mPanel";
             this.mPanel.Size = new System.Drawing.Size(242, 315);
             this.mPanel.TabIndex = 22;
+            this.mPanel.Tag = "tabobject";
             // 
             // ServerList
             // 
@@ -337,6 +338,7 @@
             this.ePanel.Name = "ePanel";
             this.ePanel.Size = new System.Drawing.Size(242, 315);
             this.ePanel.TabIndex = 36;
+            this.ePanel.Tag = "tabobject";
             // 
             // label13
             // 
@@ -551,6 +553,7 @@
             this.sPanel.Name = "sPanel";
             this.sPanel.Size = new System.Drawing.Size(242, 315);
             this.sPanel.TabIndex = 38;
+            this.sPanel.Tag = "tabobject";
             // 
             // minimizeBtn
             // 
@@ -602,6 +605,17 @@
             this.label15.TabIndex = 55;
             this.label15.Text = "Run On Start Up";
             // 
+            // eR_Toggle2
+            // 
+            this.eR_Toggle2.Location = new System.Drawing.Point(154, 55);
+            this.eR_Toggle2.Name = "eR_Toggle2";
+            this.eR_Toggle2.Size = new System.Drawing.Size(41, 23);
+            this.eR_Toggle2.TabIndex = 54;
+            this.eR_Toggle2.Text = "eR_Toggle2";
+            this.eR_Toggle2.Toggled = false;
+            this.eR_Toggle2.Type = Eternal_Romance.UK_Toggle._Type.YesNo;
+            this.eR_Toggle2.ToggledChanged += new Eternal_Romance.UK_Toggle.ToggledChangedEventHandler(this.uR_Toggle2_ToggledChanged);
+            // 
             // iplabel
             // 
             this.iplabel.AutoSize = true;
@@ -637,6 +651,17 @@
             this.label16.Size = new System.Drawing.Size(142, 13);
             this.label16.TabIndex = 51;
             this.label16.Text = "___________________________";
+            // 
+            // eR_Toggle1
+            // 
+            this.eR_Toggle1.Location = new System.Drawing.Point(183, 131);
+            this.eR_Toggle1.Name = "eR_Toggle1";
+            this.eR_Toggle1.Size = new System.Drawing.Size(41, 23);
+            this.eR_Toggle1.TabIndex = 50;
+            this.eR_Toggle1.Text = "eR_Toggle1";
+            this.eR_Toggle1.Toggled = false;
+            this.eR_Toggle1.Type = Eternal_Romance.UK_Toggle._Type.YesNo;
+            this.eR_Toggle1.ToggledChanged += new Eternal_Romance.UK_Toggle.ToggledChangedEventHandler(this.uR_Toggle1_ToggledChanged);
             // 
             // label14
             // 
@@ -835,28 +860,6 @@
             this.vpnFlags.Images.SetKeyName(2, "NL");
             this.vpnFlags.Images.SetKeyName(3, "US");
             this.vpnFlags.Images.SetKeyName(4, "AF");
-            // 
-            // eR_Toggle2
-            // 
-            this.eR_Toggle2.Location = new System.Drawing.Point(154, 55);
-            this.eR_Toggle2.Name = "eR_Toggle2";
-            this.eR_Toggle2.Size = new System.Drawing.Size(41, 23);
-            this.eR_Toggle2.TabIndex = 54;
-            this.eR_Toggle2.Text = "eR_Toggle2";
-            this.eR_Toggle2.Toggled = false;
-            this.eR_Toggle2.Type = Eternal_Romance.UK_Toggle._Type.YesNo;
-            this.eR_Toggle2.ToggledChanged += new Eternal_Romance.UK_Toggle.ToggledChangedEventHandler(this.uR_Toggle2_ToggledChanged);
-            // 
-            // eR_Toggle1
-            // 
-            this.eR_Toggle1.Location = new System.Drawing.Point(183, 131);
-            this.eR_Toggle1.Name = "eR_Toggle1";
-            this.eR_Toggle1.Size = new System.Drawing.Size(41, 23);
-            this.eR_Toggle1.TabIndex = 50;
-            this.eR_Toggle1.Text = "eR_Toggle1";
-            this.eR_Toggle1.Toggled = false;
-            this.eR_Toggle1.Type = Eternal_Romance.UK_Toggle._Type.YesNo;
-            this.eR_Toggle1.ToggledChanged += new Eternal_Romance.UK_Toggle.ToggledChangedEventHandler(this.uR_Toggle1_ToggledChanged);
             // 
             // ClientUI
             // 
