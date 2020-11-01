@@ -1,4 +1,6 @@
-﻿
+﻿/*
+ * Taken From https://csharpui.com/custom-alert-box/
+ */
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +15,9 @@ using UnknownVPN.Properties;
 namespace UnknownVPN
 {
   
-    public partial class NotifyUI : Form
+    public partial class NotifyForm : Form
     {
-        public NotifyUI()
+        public NotifyForm()
         {
             InitializeComponent();
         }
@@ -34,7 +36,7 @@ namespace UnknownVPN
             Error,
             Info
         }
-        private NotifyUI.enmAction action;
+        private enmAction action;
 
         private int x, y;
 
@@ -51,7 +53,7 @@ namespace UnknownVPN
                     timer1.Interval = 5000;
                     action = enmAction.close;
                     break;
-                case NotifyUI.enmAction.start:
+                case NotifyForm.enmAction.start:
                     this.timer1.Interval = 1;
                     this.Opacity += 0.1;
                     if (this.x < this.Location.X)
@@ -62,7 +64,7 @@ namespace UnknownVPN
                     {
                         if (this.Opacity == 1.0)
                         {
-                            action = NotifyUI.enmAction.wait;
+                            action = NotifyForm.enmAction.wait;
                         }
                     }
                     break;
@@ -99,7 +101,7 @@ namespace UnknownVPN
             for (int i = 1; i < 10; i++)
             {
                 fname = "alert" + i.ToString();
-                NotifyUI frm = (NotifyUI)Application.OpenForms[fname];
+                NotifyForm frm = (NotifyForm)Application.OpenForms[fname];
 
                 if (frm == null)
                 {
@@ -145,9 +147,9 @@ namespace UnknownVPN
     }
     public static class Alert
     {
-        public static void Show(string msg, NotifyUI.enmType type)
+        public static void Show(string msg, NotifyForm.enmType type)
         {
-            NotifyUI frm = new NotifyUI();
+            NotifyForm frm = new NotifyForm();
             frm.showAlert(msg, type);
         }
     }

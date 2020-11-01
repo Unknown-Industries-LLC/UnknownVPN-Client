@@ -1,6 +1,6 @@
 ﻿namespace UnknownVPN
 {
-    partial class LoginUI
+    partial class LoginForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginUI));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.uBox = new System.Windows.Forms.TextBox();
@@ -251,10 +251,11 @@
             this.uK_Toggle1.Text = "uK_Toggle1";
             this.uK_Toggle1.Toggled = false;
             this.uK_Toggle1.Type = Eternal_Romance.UK_Toggle._Type.YesNo;
+            this.uK_Toggle1.ToggledChanged += new Eternal_Romance.UK_Toggle.ToggledChangedEventHandler(this.uK_Toggle1_ToggledChanged);
             // 
-            // ILoginUI
+            // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.ClientSize = new System.Drawing.Size(266, 410);
@@ -272,10 +273,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lBar);
             this.Controls.Add(this.barz);
-            this.Font = new System.Drawing.Font("Buxton Sketch", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "ILoginUI";
+            this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UnknownVPN - Client Ver 1.0";
             this.Load += new System.EventHandler(this.LoginUI_Load);

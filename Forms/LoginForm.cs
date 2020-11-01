@@ -15,9 +15,9 @@ using System.IO.Compression;
 
 namespace UnknownVPN
 {
-    public partial class LoginUI : Form
+    public partial class LoginForm : Form
     {
-        public LoginUI()
+        public LoginForm()
         {
             InitializeComponent();
             barz.Visible = false;
@@ -67,8 +67,8 @@ namespace UnknownVPN
         #region Main
         private void Register_Click(object sender, EventArgs e)
         {
-            RegisterUI REG = new RegisterUI();
-            REG.Show();
+            RegisterForm reg = new RegisterForm();
+            reg.Show();
             Hide();
         }
         private void Login_Click(object sender, EventArgs e)
@@ -76,22 +76,23 @@ namespace UnknownVPN
             var response = UnknownAPI.Login(uBox.Text, pBox.Text, ThumbPrint.Value());
             if (response.Item1)
             {
-                if(Properties.Settings.Default.remember)
+                if (uK_Toggle1.Toggled)
                 {
                     Properties.Settings.Default.Username = uBox.Text;
                     Properties.Settings.Default.password = pBox.Text;
+                    Properties.Settings.Default.Save();
                 }
-                Alert.Show("Login was successful...", NotifyUI.enmType.Success);
+                Alert.Show("Login was successful...", NotifyForm.enmType.Success);
                 UserData.Username = uBox.Text;
                 UserData.Password = pBox.Text;
-                ClientUI FRM = new ClientUI();
+                ClientForm FRM = new ClientForm();
                 Hide();
                 FRM.Show();
             }
             else
             {
-                MessageBox.Show(response.Item2);
-                Alert.Show("Login Failed", NotifyUI.enmType.Error);
+               // MessageBox.Show(response.Item2);
+                Alert.Show("Login Failed", NotifyForm.enmType.Error);
             }
         }
         private void LoginUI_Load(object sender, EventArgs e)
@@ -113,17 +114,19 @@ namespace UnknownVPN
                 }
             }
 
-            uBox.Text = Properties.Settings.Default.Username;
-            pBox.Text = Properties.Settings.Default.password;
-
-            if (Properties.Settings.Default.remember) { uK_Toggle1.Toggled = true; } else { uK_Toggle1.Toggled = false; };
-            
+            if (Properties.Settings.Default.remember)
+            {
+                uK_Toggle1.Toggled = Properties.Settings.Default.remember;
+                uBox.Text = Properties.Settings.Default.Username;
+                pBox.Text = Properties.Settings.Default.password;
+            }
         }
-        private void RememberME_ToggledChanged()
+
+        private void uK_Toggle1_ToggledChanged()
         {
-            if (uK_Toggle1.Toggled) { Properties.Settings.Default.Username = uBox.Text; Properties.Settings.Default.password = pBox.Text; } else { Properties.Settings.Default.Username = string.Empty; Properties.Settings.Default.password = string.Empty; }
+            Properties.Settings.Default.remember = uK_Toggle1.Toggled;
+            Properties.Settings.Default.Save();
         }
-
     }
     #endregion
 }

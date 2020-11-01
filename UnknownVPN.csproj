@@ -56,39 +56,39 @@
     <Compile Include="IUnknownComs.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Forms\NotifyUI.cs">
+    <Compile Include="Forms\NotifyForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\NotifyUI.Designer.cs">
-      <DependentUpon>NotifyUI.cs</DependentUpon>
+    <Compile Include="Forms\NotifyForm.Designer.cs">
+      <DependentUpon>NotifyForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\LoginUI.cs">
+    <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\LoginUI.Designer.cs">
-      <DependentUpon>LoginUI.cs</DependentUpon>
+    <Compile Include="Forms\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Forms\ClientUI.cs">
+    <Compile Include="Forms\ClientForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ClientUI.Designer.cs">
-      <DependentUpon>ClientUI.cs</DependentUpon>
+    <Compile Include="Forms\ClientForm.Designer.cs">
+      <DependentUpon>ClientForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\RegisterUI.cs">
+    <Compile Include="Forms\RegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\RegisterUI.Designer.cs">
-      <DependentUpon>RegisterUI.cs</DependentUpon>
+    <Compile Include="Forms\RegisterForm.Designer.cs">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
     <Compile Include="API\Models\ServerObject.cs" />
     <Compile Include="API\UnknownAPI.cs" />
-    <EmbeddedResource Include="Forms\NotifyUI.resx">
-      <DependentUpon>NotifyUI.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\NotifyForm.resx">
+      <DependentUpon>NotifyForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\LoginUI.resx">
-      <DependentUpon>LoginUI.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -100,11 +100,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Forms\ClientUI.resx">
-      <DependentUpon>ClientUI.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\ClientForm.resx">
+      <DependentUpon>ClientForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\RegisterUI.resx">
-      <DependentUpon>RegisterUI.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\RegisterForm.resx">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">

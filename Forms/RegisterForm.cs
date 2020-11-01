@@ -12,13 +12,12 @@ using UnknownVPN.API;
 
 namespace UnknownVPN
 {
-    public partial class RegisterUI : Form
+    public partial class RegisterForm : Form
     {
-        public RegisterUI()
+        public RegisterForm()
         {
             InitializeComponent();
             barz.Visible = false;
-
         }
 
 
@@ -54,7 +53,7 @@ namespace UnknownVPN
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            LoginUI Login = new LoginUI();
+            LoginForm Login = new LoginForm();
             Login.Show();
             Close();
         }
@@ -65,9 +64,9 @@ namespace UnknownVPN
         #endregion
         #region Functions - Connect, disconnect, ect 
       
-        public void Alert(string msg, NotifyUI.enmType type)
+        public void Alert(string msg, NotifyForm.enmType type)
         {
-            NotifyUI frm = new NotifyUI();
+            NotifyForm frm = new NotifyForm();
             frm.showAlert(msg, type);
         }
         #endregion
@@ -82,8 +81,8 @@ namespace UnknownVPN
                     UnknownAPI.SetSoftetherUserPasswords(pBox.Text);
               //  }
 
-                Alert("Account created Successfully...", NotifyUI.enmType.Success);
-                LoginUI Login = new LoginUI();
+                Alert("Account created Successfully...", NotifyForm.enmType.Success);
+                LoginForm Login = new LoginForm();
                 Login.Show();
                 Close();
             }

@@ -18,9 +18,9 @@ using System.IO.Compression;
 
 namespace UnknownVPN
 {
-    public partial class ClientUI : Form
+    public partial class ClientForm : Form
     {
-        public ClientUI()
+        public ClientForm()
         {
             InitializeComponent();
             textBox1.ScrollBars = ScrollBars.Both;
@@ -68,8 +68,8 @@ namespace UnknownVPN
                 atkbtn.Text = "       Connect";
                 sname.Text = "• Server name: ";
                 status.Text = "Status: Disconnected!";
-                Alert("You have been logged out!", NotifyUI.enmType.Info);
-                LoginUI login = new LoginUI();
+                Alert("You have been logged out!", NotifyForm.enmType.Info);
+                LoginForm login = new LoginForm();
                 login.Show();
                 Close();
             }
@@ -106,9 +106,9 @@ namespace UnknownVPN
         }
         #endregion   
         #region Functions - Connect, Disconnect ect
-        public void Alert(string msg, NotifyUI.enmType type)
+        public void Alert(string msg, NotifyForm.enmType type)
         {
-            NotifyUI frm = new NotifyUI();
+            NotifyForm frm = new NotifyForm();
             frm.showAlert(msg, type);
 
         }
@@ -124,7 +124,7 @@ namespace UnknownVPN
                 UnknownAPI.Connect(sList);
             }
             status.Text = "Status: " + conStatus;
-            Alert(alertText + " please wait...", NotifyUI.enmType.Info);
+            Alert(alertText + " please wait...", NotifyForm.enmType.Info);
             pictureBox11.BackgroundImageLayout = ImageLayout.Stretch;
             if (isCustom)
             {
@@ -195,13 +195,13 @@ namespace UnknownVPN
         }
         private void updatServerList_Click(object sender, EventArgs e)
         {
-            Alert("Updating server list..", NotifyUI.enmType.Info);
+            Alert("Updating server list..", NotifyForm.enmType.Info);
 
             Servers.Text = UnknownAPI.UpdateServers();
         }
         private void updat_Click(object sender, EventArgs e)
         {
-            Alert("Checking for updates..", NotifyUI.enmType.Info);
+            Alert("Checking for updates..", NotifyForm.enmType.Info);
             var result = UnknownAPI.UpdateCheck();
             if(result.Item1)
             {
@@ -241,7 +241,7 @@ namespace UnknownVPN
         private void uR_Toggle2_ToggledChanged()
         {
             if (eR_Toggle2.Toggled) { UnknownAPI.SetRunOnStartUp(true);  Properties.Settings.Default.DoStartUP = true; } else { UnknownAPI.SetRunOnStartUp(false); Properties.Settings.Default.DoStartUP = false; }
-            Alert("Setting has been updated...", NotifyUI.enmType.Info);
+            Alert("Setting has been updated...", NotifyForm.enmType.Info);
         }
         private void button1_Click(object sender, EventArgs e)
         {

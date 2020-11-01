@@ -1,6 +1,6 @@
 ﻿namespace UnknownVPN
 {
-    partial class NotifyUI
+    partial class NotifyForm
     {
         /// <summary>
         /// Required designer variable.
