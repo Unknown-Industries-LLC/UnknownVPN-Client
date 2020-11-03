@@ -10,8 +10,7 @@ namespace UnknownVPN
        
         /*------------------------------------------------------------------------------
          Description :
-         This application uses direct pointer to files for owerwriting content via
-         threading that speedup process and don't let app going to be freez.
+         This application use is for unknownvpns service.
          Copyright 2020 MIT License.
          Permission is hereby granted, free of charge, to any person obtaining a copy
          of this software and associated documentation files (the "Software"), to deal
