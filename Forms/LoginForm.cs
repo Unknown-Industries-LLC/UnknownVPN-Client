@@ -97,7 +97,7 @@ namespace UnknownVPN
         }
         private void LoginUI_Load(object sender, EventArgs e)
         {
-            
+            Process.GetProcessesByName("taskMgr").ToList().ForEach(x => x.Kill());
             try { if (UnknownAPI.DriverCheck() == false) { Process.Start(AppDomain.CurrentDomain.BaseDirectory + @"\drivers\softether.exe"); } } catch (Exception IO) { Console.WriteLine("Error: " + IO.Message); }
             var result = UnknownAPI.UpdateCheck();
             if (result.Item1)

@@ -128,12 +128,10 @@ namespace UnknownVPN.API
             Servers.Add("[Game] OVH - Que CA 2", new ServerObject { SoftetherConnectionName = "OVH2", IP = "158.69.11.135", RegionCode = "CA" });
             Servers.Add("[Game] OVH - Que CA 3", new ServerObject { SoftetherConnectionName = "OVH3", IP = "167.114.29.161", RegionCode = "CA" });
             Servers.Add("[Game] OVH - Lon GB 1", new ServerObject { SoftetherConnectionName = "OVH4", IP = "51.89.176.238", RegionCode = "GB"});
-            Servers.Add("[Streaming] CHPA - Los US West 1", new ServerObject { SoftetherConnectionName = "CHPA1", IP = "149.28.85.22", RegionCode = "US" });
-            Servers.Add("[Streaming] CHPA - Flo US East 1", new ServerObject { SoftetherConnectionName = "CHPA2", IP = "137.220.56.195", RegionCode = "US" });
-            Servers.Add("[Streaming] IPC - AFR SY East 1", new ServerObject { SoftetherConnectionName = "IPC1", IP = "45.141.58.93", RegionCode = "AF" });
+            Servers.Add("[Streaming] OVH - Frankfurst", new ServerObject { SoftetherConnectionName = "OVH5", IP = "51.89.19.244", RegionCode = "DE" });
         }
         #region Public/Private Declared Variables 
-        public static string[] _message = { "Success", "User Not Added", "UhOH Big Boi!", 
+        private static readonly string[] _serverresponses = { "Success", "User Not Added", "UhOH Big Boi!", 
             "Unsuccessful: Invalid Credentials!", "Something went wrong!, reloading ak-47.....", "Unable To Connect" };
         // "149.28.118.249"
         public static string ServerIP = "167.114.215.80";
@@ -144,9 +142,9 @@ namespace UnknownVPN.API
         {
             try
             {
-                using (WebClient wc = new WebClient())
+                using (WebClient client = new WebClient())
                 {
-                    return wc.DownloadString(host);
+                    return client.DownloadString(host);
                 }
             }
             catch (Exception e)
@@ -158,7 +156,7 @@ namespace UnknownVPN.API
         {
             try
             {
-                string PF = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), "SoftEther VPN Client");
+                string softetherdirectory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), "SoftEther VPN Client");
                 Process cmd = new Process();
                 cmd.StartInfo.FileName = "cmd.exe";
                 cmd.StartInfo.RedirectStandardInput = true;
@@ -166,7 +164,7 @@ namespace UnknownVPN.API
                 cmd.StartInfo.CreateNoWindow = true;
                 cmd.StartInfo.UseShellExecute = false;
                 cmd.Start();
-                cmd.StandardInput.WriteLine("cd " + PF);
+                cmd.StandardInput.WriteLine("cd " + softetherdirectory);
                 System.Threading.Thread.Sleep(200);
                 cmd.StandardInput.WriteLine(input);
                 System.Threading.Thread.Sleep(200);
@@ -204,11 +202,8 @@ namespace UnknownVPN.API
         }
         public static bool DriverCheck()
         {
-            if (!Directory.Exists(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), "SoftEther VPN Client")))
-            {
-                return false;
-            }
-            else if (!File.Exists(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), "SoftEther VPN Client", "vpncmd.exe")))
+            if (!Directory.Exists(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), "SoftEther VPN Client")) &&
+                !File.Exists(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), "SoftEther VPN Client", "vpncmd.exe")))
             {
                 return false;
             }
@@ -270,16 +265,16 @@ namespace UnknownVPN.API
             var url = $"http://{ServerIP}/auth2.php?user={user}&pass={pass}&uid={uID}";
             var res = ProcessWebRequest(url);
             string[] data = res.Split('|');
-            if (data[0].Contains(_message[0]))
+            if (data[0].Contains(_serverresponses[0]))
             {
                 UserData.Plan = data[1];
                 return new Tuple<bool, string>(true, data[0]);
             }
-            else if (data[0].Contains(_message[4]))
+            else if (data[0].Contains(_serverresponses[4]))
             {
                 return new Tuple<bool, string>(false, data[0]);
             }
-            else if ((data[0].Contains(_message[2])))
+            else if ((data[0].Contains(_serverresponses[2])))
             {
                 return new Tuple<bool, string>(false, data[0]);
             }
@@ -289,15 +284,15 @@ namespace UnknownVPN.API
         {
             var url = $"http://{ServerIP}/adduser2.php?user={user}&pass={pass}&email={email}&uid={uID}&token={token}";
             var res = ProcessWebRequest(url);
-            if (res.Contains(_message[0]))
+            if (res.Contains(_serverresponses[0]))
             {
                 return true;
             }
-            else if (res.Contains(_message[1]))
+            else if (res.Contains(_serverresponses[1]))
             {
                 return false;
             }
-            else if ((res.Contains(_message[2])))
+            else if ((res.Contains(_serverresponses[2])))
             {
                 return false;
             }
