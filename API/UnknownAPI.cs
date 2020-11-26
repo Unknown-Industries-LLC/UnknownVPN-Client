@@ -283,6 +283,18 @@ namespace UnknownVPN.API
             }
             return new Tuple<bool, string>(false, null);
         }
+        public static bool OnlineCheck()
+        {
+            using (var ping = new System.Net.NetworkInformation.Ping())
+            {
+                return ping.Send(ServerIP, 500).Status == System.Net.NetworkInformation.IPStatus.Success;
+            }
+        }
+        public static void OpenSoftether()
+        {
+            string softether = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles), "SoftEther VPN Client", "vpncmgr.exe");
+            Process.Start(softether);
+        }
         public static string UpdateServers()
         {
             var result = MessageBox.Show("Would you like to set a password now.\n If not you will need to set one manually later?", "Question?",

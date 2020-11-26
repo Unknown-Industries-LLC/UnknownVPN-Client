@@ -182,6 +182,7 @@ namespace UnknownVPN
                 }
             }
         }
+      
         private void Discord_Click(object sender, EventArgs e)
         {
             Process.Start("https://discord.gg/rsgFNaH");

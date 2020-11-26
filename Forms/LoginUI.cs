@@ -84,9 +84,9 @@ namespace UnknownVPN
                 Alert.Show("Login was successful...", NotifyUI.enmType.Success);
                 UserData.Username = uBox.Text;
                 UserData.Password = pBox.Text;
-                ClientUI FRM = new ClientUI();
+                ClientUI frm = new ClientUI();
                 Hide();
-                FRM.Show();
+                frm.Show();
             }
             else
             {
@@ -112,7 +112,11 @@ namespace UnknownVPN
                     Application.Exit();
                 }
             }
-
+            if(!UnknownAPI.OnlineCheck())
+            {
+                UnknownAPI.OpenSoftether();
+                Application.Exit();
+            }
             uBox.Text = Properties.Settings.Default.Username;
             pBox.Text = Properties.Settings.Default.password;
 
