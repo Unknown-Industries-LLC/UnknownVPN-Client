@@ -63,7 +63,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(142)))), ((int)(((byte)(102)))));
             this.label1.Location = new System.Drawing.Point(20, 154);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(227, 13);
+            this.label1.Size = new System.Drawing.Size(316, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "____________________________________________";
             // 
@@ -75,7 +75,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(142)))), ((int)(((byte)(102)))));
             this.label2.Location = new System.Drawing.Point(20, 210);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(227, 13);
+            this.label2.Size = new System.Drawing.Size(316, 17);
             this.label2.TabIndex = 2;
             this.label2.Text = "____________________________________________";
             // 
@@ -87,7 +87,7 @@
             this.uBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(142)))), ((int)(((byte)(102)))));
             this.uBox.Location = new System.Drawing.Point(26, 146);
             this.uBox.Name = "uBox";
-            this.uBox.Size = new System.Drawing.Size(214, 14);
+            this.uBox.Size = new System.Drawing.Size(214, 17);
             this.uBox.TabIndex = 0;
             // 
             // eBox
@@ -98,7 +98,7 @@
             this.eBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(142)))), ((int)(((byte)(102)))));
             this.eBox.Location = new System.Drawing.Point(26, 203);
             this.eBox.Name = "eBox";
-            this.eBox.Size = new System.Drawing.Size(218, 14);
+            this.eBox.Size = new System.Drawing.Size(218, 17);
             this.eBox.TabIndex = 1;
             // 
             // label3
@@ -109,7 +109,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(142)))), ((int)(((byte)(102)))));
             this.label3.Location = new System.Drawing.Point(21, 131);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 13);
+            this.label3.Size = new System.Drawing.Size(66, 17);
             this.label3.TabIndex = 5;
             this.label3.Text = "Username";
             // 
@@ -121,7 +121,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(142)))), ((int)(((byte)(102)))));
             this.label4.Location = new System.Drawing.Point(23, 187);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(33, 13);
+            this.label4.Size = new System.Drawing.Size(39, 17);
             this.label4.TabIndex = 6;
             this.label4.Text = "Email";
             // 
@@ -131,9 +131,9 @@
             this.barz.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.barz.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.barz.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(142)))), ((int)(((byte)(102)))));
-            this.barz.Location = new System.Drawing.Point(63, 378);
+            this.barz.Location = new System.Drawing.Point(61, 378);
             this.barz.Name = "barz";
-            this.barz.Size = new System.Drawing.Size(137, 13);
+            this.barz.Size = new System.Drawing.Size(190, 17);
             this.barz.TabIndex = 13;
             this.barz.Text = "__________________________";
             // 
@@ -145,7 +145,7 @@
             this.lBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(142)))), ((int)(((byte)(102)))));
             this.lBar.Location = new System.Drawing.Point(57, 376);
             this.lBar.Name = "lBar";
-            this.lBar.Size = new System.Drawing.Size(148, 13);
+            this.lBar.Size = new System.Drawing.Size(179, 17);
             this.lBar.TabIndex = 6;
             this.lBar.Text = "Don\'t have a token? Click Here";
             this.lBar.Click += new System.EventHandler(this.lBar_Click);
@@ -160,7 +160,7 @@
             this.tlbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(142)))), ((int)(((byte)(102)))));
             this.tlbl.Location = new System.Drawing.Point(23, 298);
             this.tlbl.Name = "tlbl";
-            this.tlbl.Size = new System.Drawing.Size(34, 13);
+            this.tlbl.Size = new System.Drawing.Size(41, 17);
             this.tlbl.TabIndex = 19;
             this.tlbl.Text = "Token";
             // 
@@ -172,7 +172,7 @@
             this.plbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(142)))), ((int)(((byte)(102)))));
             this.plbl.Location = new System.Drawing.Point(21, 245);
             this.plbl.Name = "plbl";
-            this.plbl.Size = new System.Drawing.Size(53, 13);
+            this.plbl.Size = new System.Drawing.Size(61, 17);
             this.plbl.TabIndex = 18;
             this.plbl.Text = "Password";
             // 
@@ -184,7 +184,7 @@
             this.tBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(142)))), ((int)(((byte)(102)))));
             this.tBox.Location = new System.Drawing.Point(26, 314);
             this.tBox.Name = "tBox";
-            this.tBox.Size = new System.Drawing.Size(214, 14);
+            this.tBox.Size = new System.Drawing.Size(214, 17);
             this.tBox.TabIndex = 3;
             // 
             // pBox
@@ -196,7 +196,7 @@
             this.pBox.Location = new System.Drawing.Point(26, 260);
             this.pBox.Name = "pBox";
             this.pBox.PasswordChar = '•';
-            this.pBox.Size = new System.Drawing.Size(214, 14);
+            this.pBox.Size = new System.Drawing.Size(214, 17);
             this.pBox.TabIndex = 2;
             this.pBox.UseSystemPasswordChar = true;
             // 
@@ -208,7 +208,7 @@
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(142)))), ((int)(((byte)(102)))));
             this.label7.Location = new System.Drawing.Point(20, 321);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(227, 13);
+            this.label7.Size = new System.Drawing.Size(316, 17);
             this.label7.TabIndex = 15;
             this.label7.Text = "____________________________________________";
             // 
@@ -220,7 +220,7 @@
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(142)))), ((int)(((byte)(102)))));
             this.label8.Location = new System.Drawing.Point(20, 268);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(227, 13);
+            this.label8.Size = new System.Drawing.Size(316, 17);
             this.label8.TabIndex = 14;
             this.label8.Text = "____________________________________________";
             // 
@@ -236,7 +236,7 @@
             this.clsbtn.Name = "clsbtn";
             this.clsbtn.Size = new System.Drawing.Size(103, 24);
             this.clsbtn.TabIndex = 5;
-            this.clsbtn.Text = "   Cancel";
+            this.clsbtn.Text = "   Go Back";
             this.clsbtn.UseVisualStyleBackColor = false;
             this.clsbtn.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -305,9 +305,9 @@
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
             // 
-            // RegUI
+            // RegisterUI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -333,9 +333,9 @@
             this.Font = new System.Drawing.Font("Buxton Sketch", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "RegUI";
+            this.Name = "RegisterUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "UnknownVPN - Client Ver 1.6";
+            this.Text = "UnknownVPN - Client Ver 1.8 beta";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TitleBar)).EndInit();

@@ -68,9 +68,11 @@
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.eR_Toggle2 = new Eternal_Romance.UK_Toggle();
             this.iplabel = new System.Windows.Forms.Label();
             this.ipBox = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
+            this.eR_Toggle1 = new Eternal_Romance.UK_Toggle();
             this.label14 = new System.Windows.Forms.Label();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.appver = new System.Windows.Forms.Label();
@@ -83,11 +85,10 @@
             this.TitleBar = new System.Windows.Forms.PictureBox();
             this.tab1 = new System.Windows.Forms.Button();
             this.tab2 = new System.Windows.Forms.Button();
+            this.vpnFlags = new System.Windows.Forms.ImageList(this.components);
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tab3 = new System.Windows.Forms.Button();
-            this.vpnFlags = new System.Windows.Forms.ImageList(this.components);
-            this.eR_Toggle2 = new Eternal_Romance.UK_Toggle();
-            this.eR_Toggle1 = new Eternal_Romance.UK_Toggle();
+            this.label18 = new System.Windows.Forms.Label();
             this.mPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -139,9 +140,9 @@
             this.ServerList.Font = new System.Drawing.Font("Calibri", 8.25F);
             this.ServerList.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(142)))), ((int)(((byte)(102)))));
             this.ServerList.FormattingEnabled = true;
-            this.ServerList.Location = new System.Drawing.Point(11, 97);
+            this.ServerList.Location = new System.Drawing.Point(12, 102);
             this.ServerList.Name = "ServerList";
-            this.ServerList.Size = new System.Drawing.Size(215, 22);
+            this.ServerList.Size = new System.Drawing.Size(214, 22);
             this.ServerList.TabIndex = 39;
             this.ServerList.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.comboBox1_DrawItem);
             // 
@@ -149,7 +150,7 @@
             // 
             this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox11.Location = new System.Drawing.Point(12, 97);
+            this.pictureBox11.Location = new System.Drawing.Point(12, 102);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(23, 22);
             this.pictureBox11.TabIndex = 51;
@@ -161,7 +162,7 @@
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(142)))), ((int)(((byte)(102)))));
-            this.linkLabel1.Location = new System.Drawing.Point(55, 25);
+            this.linkLabel1.Location = new System.Drawing.Point(55, 11);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(125, 13);
             this.linkLabel1.TabIndex = 50;
@@ -186,9 +187,9 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(142)))), ((int)(((byte)(102)))));
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox3.Location = new System.Drawing.Point(11, 138);
+            this.pictureBox3.Location = new System.Drawing.Point(12, 138);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(216, 23);
+            this.pictureBox3.Size = new System.Drawing.Size(215, 23);
             this.pictureBox3.TabIndex = 47;
             this.pictureBox3.TabStop = false;
             // 
@@ -248,6 +249,7 @@
             this.label1.Size = new System.Drawing.Size(42, 13);
             this.label1.TabIndex = 38;
             this.label1.Text = "Ver: 1.6";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // status
             // 
@@ -297,11 +299,11 @@
             // 
             // pictureBox4
             // 
-            this.pictureBox4.BackgroundImage = global::UnknownVPN.Properties.Resources.cooltext359493755231136;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox4.Location = new System.Drawing.Point(12, 11);
+            this.pictureBox4.BackgroundImage = global::UnknownVPN.Properties.Resources.Sans_titre___1;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Location = new System.Drawing.Point(9, 25);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(214, 86);
+            this.pictureBox4.Size = new System.Drawing.Size(220, 74);
             this.pictureBox4.TabIndex = 48;
             this.pictureBox4.TabStop = false;
             // 
@@ -317,6 +319,7 @@
             // ePanel
             // 
             this.ePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ePanel.Controls.Add(this.label18);
             this.ePanel.Controls.Add(this.label13);
             this.ePanel.Controls.Add(this.pictureBox7);
             this.ePanel.Controls.Add(this.label3);
@@ -327,13 +330,13 @@
             this.ePanel.Controls.Add(this.igpic);
             this.ePanel.Controls.Add(this.label9);
             this.ePanel.Controls.Add(this.label6);
-            this.ePanel.Controls.Add(this.label12);
             this.ePanel.Controls.Add(this.label11);
             this.ePanel.Controls.Add(this.label10);
             this.ePanel.Controls.Add(this.label8);
             this.ePanel.Controls.Add(this.textBox1);
             this.ePanel.Controls.Add(this.label7);
-            this.ePanel.Location = new System.Drawing.Point(1111, 1111);
+            this.ePanel.Controls.Add(this.label12);
+            this.ePanel.Location = new System.Drawing.Point(6666, 6666);
             this.ePanel.Name = "ePanel";
             this.ePanel.Size = new System.Drawing.Size(242, 315);
             this.ePanel.TabIndex = 36;
@@ -356,7 +359,7 @@
             this.pictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox7.Location = new System.Drawing.Point(11, 191);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(216, 23);
+            this.pictureBox7.Size = new System.Drawing.Size(215, 23);
             this.pictureBox7.TabIndex = 50;
             this.pictureBox7.TabStop = false;
             // 
@@ -438,7 +441,7 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(97, 13);
             this.label9.TabIndex = 34;
-            this.label9.Text = "Developed By: Josh";
+            this.label9.Text = "UnknownVPN © 2021";
             // 
             // label6
             // 
@@ -458,11 +461,11 @@
             this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.label12.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(142)))), ((int)(((byte)(102)))));
-            this.label12.Location = new System.Drawing.Point(157, 129);
+            this.label12.Location = new System.Drawing.Point(170, 129);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(61, 52);
+            this.label12.Size = new System.Drawing.Size(49, 52);
             this.label12.TabIndex = 49;
-            this.label12.Text = "♣ Wifi/Sir\r\n- Developer\r\n- Security\r\n• Support";
+            this.label12.Text = "SEO/Staff\r\n\r\n• WiFi\r\n• EAX";
             // 
             // label11
             // 
@@ -470,11 +473,11 @@
             this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.label11.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(142)))), ((int)(((byte)(102)))));
-            this.label11.Location = new System.Drawing.Point(89, 129);
+            this.label11.Location = new System.Drawing.Point(92, 129);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(61, 52);
             this.label11.TabIndex = 48;
-            this.label11.Text = "♣ Maxim\r\n- Developer\r\n• Security\r\n• Support";
+            this.label11.Text = "Developers\r\n\r\n• Joshua\r\n• Dionk";
             // 
             // label10
             // 
@@ -482,11 +485,11 @@
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.label10.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(142)))), ((int)(((byte)(102)))));
-            this.label10.Location = new System.Drawing.Point(22, 129);
+            this.label10.Location = new System.Drawing.Point(24, 129);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(63, 52);
+            this.label10.Size = new System.Drawing.Size(51, 52);
             this.label10.TabIndex = 47;
-            this.label10.Text = "♣ Joshua\r\n• Developer\r\n• Security\r\n• Support";
+            this.label10.Text = "Founders\r\n\r\n• Maxim\r\n• Joshua";
             // 
             // label8
             // 
@@ -602,6 +605,17 @@
             this.label15.TabIndex = 55;
             this.label15.Text = "Run On Start Up";
             // 
+            // eR_Toggle2
+            // 
+            this.eR_Toggle2.Location = new System.Drawing.Point(154, 55);
+            this.eR_Toggle2.Name = "eR_Toggle2";
+            this.eR_Toggle2.Size = new System.Drawing.Size(41, 23);
+            this.eR_Toggle2.TabIndex = 54;
+            this.eR_Toggle2.Text = "eR_Toggle2";
+            this.eR_Toggle2.Toggled = false;
+            this.eR_Toggle2.Type = Eternal_Romance.UK_Toggle._Type.YesNo;
+            this.eR_Toggle2.ToggledChanged += new Eternal_Romance.UK_Toggle.ToggledChangedEventHandler(this.uR_Toggle2_ToggledChanged);
+            // 
             // iplabel
             // 
             this.iplabel.AutoSize = true;
@@ -637,6 +651,17 @@
             this.label16.Size = new System.Drawing.Size(142, 13);
             this.label16.TabIndex = 51;
             this.label16.Text = "___________________________";
+            // 
+            // eR_Toggle1
+            // 
+            this.eR_Toggle1.Location = new System.Drawing.Point(183, 131);
+            this.eR_Toggle1.Name = "eR_Toggle1";
+            this.eR_Toggle1.Size = new System.Drawing.Size(41, 23);
+            this.eR_Toggle1.TabIndex = 50;
+            this.eR_Toggle1.Text = "eR_Toggle1";
+            this.eR_Toggle1.Toggled = false;
+            this.eR_Toggle1.Type = Eternal_Romance.UK_Toggle._Type.YesNo;
+            this.eR_Toggle1.ToggledChanged += new Eternal_Romance.UK_Toggle.ToggledChangedEventHandler(this.uR_Toggle1_ToggledChanged);
             // 
             // label14
             // 
@@ -800,6 +825,18 @@
             this.tab2.UseVisualStyleBackColor = false;
             this.tab2.Click += new System.EventHandler(this.tab2_Click);
             // 
+            // vpnFlags
+            // 
+            this.vpnFlags.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("vpnFlags.ImageStream")));
+            this.vpnFlags.TransparentColor = System.Drawing.Color.Transparent;
+            this.vpnFlags.Images.SetKeyName(0, "CA");
+            this.vpnFlags.Images.SetKeyName(1, "GB");
+            this.vpnFlags.Images.SetKeyName(2, "NL");
+            this.vpnFlags.Images.SetKeyName(3, "US");
+            this.vpnFlags.Images.SetKeyName(4, "AF");
+            this.vpnFlags.Images.SetKeyName(5, "UVPN");
+            this.vpnFlags.Images.SetKeyName(6, "U");
+            // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(142)))), ((int)(((byte)(102)))));
@@ -826,37 +863,17 @@
             this.tab3.UseVisualStyleBackColor = false;
             this.tab3.Click += new System.EventHandler(this.tab3_Click);
             // 
-            // vpnFlags
+            // label18
             // 
-            this.vpnFlags.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("vpnFlags.ImageStream")));
-            this.vpnFlags.TransparentColor = System.Drawing.Color.Transparent;
-            this.vpnFlags.Images.SetKeyName(0, "CA");
-            this.vpnFlags.Images.SetKeyName(1, "GB");
-            this.vpnFlags.Images.SetKeyName(2, "NL");
-            this.vpnFlags.Images.SetKeyName(3, "US");
-            this.vpnFlags.Images.SetKeyName(4, "AF");
-            // 
-            // eR_Toggle2
-            // 
-            this.eR_Toggle2.Location = new System.Drawing.Point(154, 55);
-            this.eR_Toggle2.Name = "eR_Toggle2";
-            this.eR_Toggle2.Size = new System.Drawing.Size(41, 23);
-            this.eR_Toggle2.TabIndex = 54;
-            this.eR_Toggle2.Text = "eR_Toggle2";
-            this.eR_Toggle2.Toggled = false;
-            this.eR_Toggle2.Type = Eternal_Romance.UK_Toggle._Type.YesNo;
-            this.eR_Toggle2.ToggledChanged += new Eternal_Romance.UK_Toggle.ToggledChangedEventHandler(this.uR_Toggle2_ToggledChanged);
-            // 
-            // eR_Toggle1
-            // 
-            this.eR_Toggle1.Location = new System.Drawing.Point(183, 131);
-            this.eR_Toggle1.Name = "eR_Toggle1";
-            this.eR_Toggle1.Size = new System.Drawing.Size(41, 23);
-            this.eR_Toggle1.TabIndex = 50;
-            this.eR_Toggle1.Text = "eR_Toggle1";
-            this.eR_Toggle1.Toggled = false;
-            this.eR_Toggle1.Type = Eternal_Romance.UK_Toggle._Type.YesNo;
-            this.eR_Toggle1.ToggledChanged += new Eternal_Romance.UK_Toggle.ToggledChangedEventHandler(this.uR_Toggle1_ToggledChanged);
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.label18.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(142)))), ((int)(((byte)(102)))));
+            this.label18.Location = new System.Drawing.Point(20, 139);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(202, 13);
+            this.label18.TabIndex = 52;
+            this.label18.Text = "_______________________________________";
             // 
             // ClientUI
             // 
@@ -876,7 +893,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ClientUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "UnknownVPN - Client Ver 1.0";
+            this.Text = "UnknownVPN - Client Ver 1.8 Beta";
             this.Load += new System.EventHandler(this.MainUIv2_Load);
             this.mPanel.ResumeLayout(false);
             this.mPanel.PerformLayout();
@@ -960,8 +977,9 @@
         private System.Windows.Forms.Button minimizeBtn;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.PictureBox pictureBox11;
-        private System.Windows.Forms.ImageList vpnFlags;
         private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.ImageList vpnFlags;
+        private System.Windows.Forms.Label label18;
     }
 }
 

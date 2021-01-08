@@ -69,8 +69,8 @@ namespace UnknownVPN
                 sname.Text = "• Server name: ";
                 status.Text = "Status: Disconnected!";
                 Alert("You have been logged out!", NotifyUI.enmType.Info);
-                LoginUI login = new LoginUI();
-                login.Show();
+                var Login = new UnknownVPN.LoginUI();
+                Login.Show();
                 Close();
             }
             catch (Exception LOL)
@@ -141,32 +141,35 @@ namespace UnknownVPN
            
             user.Text = "• Username: " + UserData.Username;
             sub.Text = "• Subscription: " + UserData.Plan;
-            foreach (var server in UnknownAPI.Servers.Keys)
+            foreach (var server in UnknownAPI.ServerList.Keys)
             {
                 ServerList.Items.Add(server);
             }
             mPanel.Location = new Point(12, 83);
             ePanel.Location = new Point(1111, 1111);
             sPanel.Location = new Point(3333, 3333);
-            label1.Text = "Ver: 1.7";
+            label1.Text = "Ver: 1.8";
         } 
         private void Connect_Click(object sender, EventArgs e)
         {
             if (!eR_Toggle1.Toggled && ServerList.Text != "")
             {
-                atkbtn.Tag = UnknownAPI.Servers[ServerList.Text];
+                atkbtn.Tag = UnknownAPI.ServerList[ServerList.Text];
                 //unknown servers
                 if (atkbtn.Text.Contains("Connect"))
                 {
                     pictureBox12.BringToFront();
-                    vpnCommand(ServerList.Text, "AccountConnect", "Connected!", "       Disconnect", "Connecting", ServerList.Size = new Size(189, 22), ServerList.Location = new Point(37, 97), false);
+                    vpnCommand(ServerList.Text, "AccountConnect", "Connected!", "       Disconnect", "Connecting", ServerList.Size = new Size(189, 22), ServerList.Location = new Point(37, 102), false);
                     pictureBox12.SendToBack();
                 }
                 else
                 {
+                   
                     pictureBox12.BringToFront();
-                    vpnCommand(ServerList.Text, "AccountDisconnect", "Disconnected!", "       Connect", "Disconnecting", ServerList.Size = new Size(215, 22), ServerList.Location = new Point(11, 97), false);
+                    vpnCommand(ServerList.Text, "AccountDisconnect", "Disconnected!", "       Connect", "Disconnecting", ServerList.Size = new Size(214, 22), ServerList.Location = new Point(12, 102), false);
                     pictureBox12.SendToBack();
+                 
+                   
                 }
             }
             else
@@ -184,7 +187,7 @@ namespace UnknownVPN
         }
         private void Discord_Click(object sender, EventArgs e)
         {
-            Process.Start("https://discord.gg/rsgFNaH");
+            Process.Start("https://discord.link/UnknownVPN");
         }
         private void updatServerList_Click(object sender, EventArgs e)
         {
@@ -196,11 +199,15 @@ namespace UnknownVPN
         {
             Alert("Checking for updates..", NotifyUI.enmType.Info);
             var result = UnknownAPI.UpdateCheck();
-            if(result.Item1)
+            appver.Text = "• Appliction Version: " + Assembly.GetExecutingAssembly().GetName().Version;
+            DateTime now = DateTime.Now;
+            Update.Text = "• Last Updated: " + now;
+            if (result.Item1)
             {
                 using (var client = new WebClient())
                 {
                     var downloadpath = Path.GetTempFileName();
+                    
                     var executingpath = Assembly.GetExecutingAssembly().Location;
                     client.DownloadFile(result.Item2, downloadpath);
                     File.Move(executingpath, Path.GetTempFileName());
@@ -212,7 +219,7 @@ namespace UnknownVPN
         }
         private void Discord1_Click(object sender, EventArgs e)
         {
-            Process.Start("https://discord.gg/rsgFNaH");
+            Process.Start("https://discord.link/UnknownVPN");
         }
         private void comboBox1_DrawItem(object sender, DrawItemEventArgs e)
         {
@@ -225,7 +232,7 @@ namespace UnknownVPN
             {
                 try
                 {
-                    e.Graphics.DrawImage(vpnFlags.Images[UnknownAPI.Servers.Values.ElementAt(e.Index).RegionCode], new PointF(e.Bounds.X, e.Bounds.Y));
+                    e.Graphics.DrawImage(vpnFlags.Images[UnknownAPI.ServerList.Values.ElementAt(e.Index).RegionCode], new PointF(e.Bounds.X, e.Bounds.Y));
                 }
                 catch (Exception ex) { MessageBox.Show(ex.Message); }
                 e.Graphics.DrawString("  " + ServerList.Items[e.Index].ToString(), ServerList.Font, myBrush, new RectangleF(e.Bounds.X + 15, e.Bounds.Y + 1, e.Bounds.Width, e.Bounds.Height));
@@ -261,9 +268,14 @@ namespace UnknownVPN
         }
         private void igpic_Click(object sender, EventArgs e)
         {
-            Process.Start("https://www.instagram.com/ogcommunitys/");
+            Process.Start("https://www.instagram.com/unknownvpnn/");
         }
         #endregion
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(UserData.Username + Environment.NewLine + UserData.Plan);
+        }
     }
 }
 

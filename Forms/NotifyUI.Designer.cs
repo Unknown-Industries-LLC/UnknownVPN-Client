@@ -45,9 +45,9 @@
             this.lblMsg.BackColor = System.Drawing.Color.Transparent;
             this.lblMsg.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMsg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.lblMsg.Location = new System.Drawing.Point(96, 27);
+            this.lblMsg.Location = new System.Drawing.Point(96, 25);
             this.lblMsg.Name = "lblMsg";
-            this.lblMsg.Size = new System.Drawing.Size(99, 19);
+            this.lblMsg.Size = new System.Drawing.Size(121, 24);
             this.lblMsg.TabIndex = 0;
             this.lblMsg.Text = "Message Text";
             // 
@@ -85,7 +85,7 @@
             this.pictureBox3.TabIndex = 4;
             this.pictureBox3.TabStop = false;
             // 
-            // NotifyBox
+            // NotifyUI
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(142)))), ((int)(((byte)(102)))));
@@ -97,7 +97,9 @@
             this.Controls.Add(this.pictureBox3);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "NotifyBox";
+            this.Name = "NotifyUI";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Load += new System.EventHandler(this.Form_Alert_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

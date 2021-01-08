@@ -12,16 +12,19 @@ using System.Reflection;
 using UnknownVPN.API;
 using System.IO;
 using System.IO.Compression;
+using System.Runtime.InteropServices;
 
 namespace UnknownVPN
 {
     public partial class LoginUI : Form
     {
+        
+
         public LoginUI()
         {
             InitializeComponent();
             barz.Visible = false;
-
+            
         }
 
         #region Public/Private Declared Variables
@@ -55,6 +58,15 @@ namespace UnknownVPN
         {
             barz.Visible = false;
         }
+
+        private void lBar2_MouseEnter(object sender, EventArgs e)
+        {
+            barz2.Visible = true;
+        }
+        private void lBar2_MouseLeave(object sender, EventArgs e)
+        {
+            barz2.Visible = false;
+        }
         private void Close_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -67,36 +79,41 @@ namespace UnknownVPN
         #region Main
         private void Register_Click(object sender, EventArgs e)
         {
-            RegisterUI REG = new RegisterUI();
+            UnknownVPN.RegisterUI REG = new UnknownVPN.RegisterUI();
             REG.Show();
             Hide();
         }
         private void Login_Click(object sender, EventArgs e)
         {
-            var response = UnknownAPI.Login(uBox.Text, pBox.Text, ThumbPrint.Value());
-            if (response.Item1)
+            var res = UnknownAPI.UVPN_Login(uBox.Text, pBox.Text);
+            if (res.ToString().Contains("Successfully"))
             {
-                if(Properties.Settings.Default.remember)
-                {
-                    Properties.Settings.Default.Username = uBox.Text;
-                    Properties.Settings.Default.password = pBox.Text;
-                }
-                Alert.Show("Login was successful...", NotifyUI.enmType.Success);
-                UserData.Username = uBox.Text;
-                UserData.Password = pBox.Text;
-                ClientUI FRM = new ClientUI();
+                UnknownVPN.ClientUI client = new UnknownVPN.ClientUI();
+                client.Show();
                 Hide();
-                FRM.Show();
             }
             else
             {
-                MessageBox.Show(response.Item2);
-                Alert.Show("Login Failed", NotifyUI.enmType.Error);
+                UnknownAPI.Alert(res.ToString(), NotifyUI.enmType.Error);
             }
+
         }
         private void LoginUI_Load(object sender, EventArgs e)
         {
-            
+            uBox.Text = Properties.Settings.Default.Username;
+            pBox.Text = Properties.Settings.Default.password;
+
+            if (Properties.Settings.Default.remember)
+            {
+                RememberMe.Toggled = true;
+
+            }
+            else
+            {
+                RememberMe.Toggled = false;
+            }
+
+
             try { if (UnknownAPI.DriverCheck() == false) { Process.Start(AppDomain.CurrentDomain.BaseDirectory + @"\drivers\softether.exe"); } } catch (Exception IO) { Console.WriteLine("Error: " + IO.Message); }
             var result = UnknownAPI.UpdateCheck();
             if (result.Item1)
@@ -113,17 +130,33 @@ namespace UnknownVPN
                 }
             }
 
-            uBox.Text = Properties.Settings.Default.Username;
-            pBox.Text = Properties.Settings.Default.password;
-
-            if (Properties.Settings.Default.remember) { uK_Toggle1.Toggled = true; } else { uK_Toggle1.Toggled = false; };
             
         }
         private void RememberME_ToggledChanged()
         {
-            if (uK_Toggle1.Toggled) { Properties.Settings.Default.Username = uBox.Text; Properties.Settings.Default.password = pBox.Text; } else { Properties.Settings.Default.Username = string.Empty; Properties.Settings.Default.password = string.Empty; }
+            if (RememberMe.Toggled)
+            {
+                Properties.Settings.Default.Username = uBox.Text;
+                Properties.Settings.Default.password = pBox.Text;
+                Properties.Settings.Default.remember = true;
+
+            }
+            else
+            {
+                Properties.Settings.Default.Username = string.Empty;
+                Properties.Settings.Default.password = string.Empty;
+                Properties.Settings.Default.remember = false;
+            }
+            Properties.Settings.Default.Save();
         }
 
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+            UnknownVPN.Forms.ResetPwdUI PWR = new UnknownVPN.Forms.ResetPwdUI();
+            PWR.Show();
+            Hide();
+        }
     }
     #endregion
 }

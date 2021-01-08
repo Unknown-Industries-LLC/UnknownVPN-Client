@@ -37,14 +37,16 @@
             this.label4 = new System.Windows.Forms.Label();
             this.barz = new System.Windows.Forms.Label();
             this.lBar = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.RememberMe = new Eternal_Romance.UK_Toggle();
+            this.label6 = new System.Windows.Forms.Label();
+            this.barz2 = new System.Windows.Forms.Label();
             this.clsbtn = new System.Windows.Forms.Button();
             this.lgbtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.TitleBar = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.uK_Toggle1 = new Eternal_Romance.UK_Toggle();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TitleBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -57,7 +59,7 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.label1.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(142)))), ((int)(((byte)(102)))));
-            this.label1.Location = new System.Drawing.Point(19, 227);
+            this.label1.Location = new System.Drawing.Point(19, 211);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(227, 13);
             this.label1.TabIndex = 1;
@@ -69,7 +71,7 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.label2.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(142)))), ((int)(((byte)(102)))));
-            this.label2.Location = new System.Drawing.Point(19, 290);
+            this.label2.Location = new System.Drawing.Point(19, 274);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(227, 13);
             this.label2.TabIndex = 2;
@@ -81,7 +83,7 @@
             this.uBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.uBox.Font = new System.Drawing.Font("Calibri", 8.25F);
             this.uBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(142)))), ((int)(((byte)(102)))));
-            this.uBox.Location = new System.Drawing.Point(25, 219);
+            this.uBox.Location = new System.Drawing.Point(25, 203);
             this.uBox.Name = "uBox";
             this.uBox.Size = new System.Drawing.Size(214, 14);
             this.uBox.TabIndex = 0;
@@ -92,7 +94,7 @@
             this.pBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.pBox.Font = new System.Drawing.Font("Calibri", 8.25F);
             this.pBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(142)))), ((int)(((byte)(102)))));
-            this.pBox.Location = new System.Drawing.Point(25, 283);
+            this.pBox.Location = new System.Drawing.Point(25, 267);
             this.pBox.Name = "pBox";
             this.pBox.PasswordChar = '•';
             this.pBox.Size = new System.Drawing.Size(214, 14);
@@ -105,7 +107,7 @@
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.label3.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(142)))), ((int)(((byte)(102)))));
-            this.label3.Location = new System.Drawing.Point(19, 204);
+            this.label3.Location = new System.Drawing.Point(19, 188);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 13);
             this.label3.TabIndex = 5;
@@ -117,7 +119,7 @@
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.label4.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(142)))), ((int)(((byte)(102)))));
-            this.label4.Location = new System.Drawing.Point(19, 267);
+            this.label4.Location = new System.Drawing.Point(19, 251);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 13);
             this.label4.TabIndex = 6;
@@ -129,11 +131,11 @@
             this.barz.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.barz.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.barz.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(142)))), ((int)(((byte)(102)))));
-            this.barz.Location = new System.Drawing.Point(70, 378);
+            this.barz.Location = new System.Drawing.Point(30, 369);
             this.barz.Name = "barz";
-            this.barz.Size = new System.Drawing.Size(119, 13);
+            this.barz.Size = new System.Drawing.Size(94, 13);
             this.barz.TabIndex = 13;
-            this.barz.Text = " ______________________";
+            this.barz.Text = " _________________";
             // 
             // lBar
             // 
@@ -141,14 +143,64 @@
             this.lBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.lBar.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(142)))), ((int)(((byte)(102)))));
-            this.lBar.Location = new System.Drawing.Point(71, 376);
+            this.lBar.Location = new System.Drawing.Point(33, 367);
             this.lBar.Name = "lBar";
-            this.lBar.Size = new System.Drawing.Size(124, 13);
+            this.lBar.Size = new System.Drawing.Size(91, 13);
             this.lBar.TabIndex = 5;
-            this.lBar.Text = "Do you need an account?";
+            this.lBar.Text = "Need an account?";
             this.lBar.Click += new System.EventHandler(this.Register_Click);
             this.lBar.MouseEnter += new System.EventHandler(this.lBar_MouseEnter);
             this.lBar.MouseLeave += new System.EventHandler(this.lBar_MouseLeave);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.label5.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(142)))), ((int)(((byte)(102)))));
+            this.label5.Location = new System.Drawing.Point(21, 304);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(81, 13);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "Remember Me: ";
+            // 
+            // RememberMe
+            // 
+            this.RememberMe.Location = new System.Drawing.Point(100, 299);
+            this.RememberMe.Name = "RememberMe";
+            this.RememberMe.Size = new System.Drawing.Size(41, 23);
+            this.RememberMe.TabIndex = 15;
+            this.RememberMe.Toggled = false;
+            this.RememberMe.Type = Eternal_Romance.UK_Toggle._Type.YesNo;
+            this.RememberMe.ToggledChanged += new Eternal_Romance.UK_Toggle.ToggledChangedEventHandler(this.RememberME_ToggledChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.label6.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(142)))), ((int)(((byte)(102)))));
+            this.label6.Location = new System.Drawing.Point(141, 367);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(90, 13);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Forget Password?";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            this.label6.MouseEnter += new System.EventHandler(this.lBar2_MouseEnter);
+            this.label6.MouseLeave += new System.EventHandler(this.lBar2_MouseLeave);
+            // 
+            // barz2
+            // 
+            this.barz2.AutoSize = true;
+            this.barz2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.barz2.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.barz2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(142)))), ((int)(((byte)(102)))));
+            this.barz2.Location = new System.Drawing.Point(139, 369);
+            this.barz2.Name = "barz2";
+            this.barz2.Size = new System.Drawing.Size(89, 13);
+            this.barz2.TabIndex = 17;
+            this.barz2.Text = " ________________";
+            this.barz2.Visible = false;
             // 
             // clsbtn
             // 
@@ -158,7 +210,7 @@
             this.clsbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.clsbtn.Image = global::UnknownVPN.Properties.Resources.icons8_exit_16;
             this.clsbtn.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.clsbtn.Location = new System.Drawing.Point(22, 345);
+            this.clsbtn.Location = new System.Drawing.Point(22, 329);
             this.clsbtn.Name = "clsbtn";
             this.clsbtn.Size = new System.Drawing.Size(222, 24);
             this.clsbtn.TabIndex = 4;
@@ -174,7 +226,7 @@
             this.lgbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lgbtn.Image = global::UnknownVPN.Properties.Resources._lock;
             this.lgbtn.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.lgbtn.Location = new System.Drawing.Point(147, 313);
+            this.lgbtn.Location = new System.Drawing.Point(147, 297);
             this.lgbtn.Name = "lgbtn";
             this.lgbtn.Size = new System.Drawing.Size(92, 24);
             this.lgbtn.TabIndex = 3;
@@ -230,35 +282,13 @@
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.label5.Font = new System.Drawing.Font("Calibri", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(142)))), ((int)(((byte)(102)))));
-            this.label5.Location = new System.Drawing.Point(21, 320);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 13);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "Remember Me: ";
-            // 
-            // uK_Toggle1
-            // 
-            this.uK_Toggle1.Location = new System.Drawing.Point(100, 315);
-            this.uK_Toggle1.Name = "uK_Toggle1";
-            this.uK_Toggle1.Size = new System.Drawing.Size(41, 23);
-            this.uK_Toggle1.TabIndex = 15;
-            this.uK_Toggle1.Text = "uK_Toggle1";
-            this.uK_Toggle1.Toggled = false;
-            this.uK_Toggle1.Type = Eternal_Romance.UK_Toggle._Type.YesNo;
-            // 
-            // ILoginUI
+            // LoginUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.ClientSize = new System.Drawing.Size(266, 410);
-            this.Controls.Add(this.uK_Toggle1);
+            this.Controls.Add(this.RememberMe);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.clsbtn);
             this.Controls.Add(this.lgbtn);
@@ -272,12 +302,14 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lBar);
             this.Controls.Add(this.barz);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.barz2);
             this.Font = new System.Drawing.Font("Buxton Sketch", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "ILoginUI";
+            this.Name = "LoginUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "UnknownVPN - Client Ver 1.0";
+            this.Text = "UnknownVPN - Client Ver 1.8 Beta";
             this.Load += new System.EventHandler(this.LoginUI_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TitleBar)).EndInit();
@@ -304,7 +336,9 @@
         private System.Windows.Forms.Label barz;
         private System.Windows.Forms.Label lBar;
         private System.Windows.Forms.Label label5;
-        private Eternal_Romance.UK_Toggle uK_Toggle1;
+        private Eternal_Romance.UK_Toggle RememberMe;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label barz2;
     }
 }
 

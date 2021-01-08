@@ -54,44 +54,29 @@ namespace UnknownVPN
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            LoginUI Login = new LoginUI();
+            var Login = new UnknownVPN.LoginUI();
             Login.Show();
             Close();
         }
         private void lBar_Click(object sender, EventArgs e)
         {
-            Process.Start("https://discord.gg/rsgFNaH");
+            
+            Process.Start("https://discord.link/UnknownVPN");
         }
         #endregion
         #region Functions - Connect, disconnect, ect 
       
         public void Alert(string msg, NotifyUI.enmType type)
         {
-            NotifyUI frm = new NotifyUI();
+            var frm = new UnknownVPN.NotifyUI();
             frm.showAlert(msg, type);
         }
         #endregion
         #region Main - Register
         private void lgbtn_Click(object sender, EventArgs e)
         {
-            if (UnknownAPI.Registration(uBox.Text, pBox.Text, eBox.Text, ThumbPrint.Value(), tBox.Text))
-            {
-                UnknownAPI.MakeSoftetherUsers(uBox.Text);
-                //if (MessageBox.Show("Would you like to set a password now.\n If not you will need to set one manually later?", "Question?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-               // {
-                    UnknownAPI.SetSoftetherUserPasswords(pBox.Text);
-              //  }
-
-                Alert("Account created Successfully...", NotifyUI.enmType.Success);
-                LoginUI Login = new LoginUI();
-                Login.Show();
-                Close();
-            }
-            else
-            {
-                MessageBox.Show("OOPS: Seems like something went wrong!\nPlease check your information\nand try again.", "OOPS!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }  
+            UnknownAPI.UVPN_Register(uBox.Text, pBox.Text, eBox.Text, UnknownAPI.RandomString(8), tBox.Text);
+        }
     }
     #endregion
 }

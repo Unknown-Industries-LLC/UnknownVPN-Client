@@ -19,7 +19,7 @@ namespace UnknownVPN.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -216,6 +216,26 @@ namespace UnknownVPN.Properties {
         internal static System.Drawing.Bitmap cooltext359523504635125 {
             get {
                 object obj = ResourceManager.GetObject("cooltext359523504635125", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cooltext373283620078785 {
+            get {
+                object obj = ResourceManager.GetObject("cooltext373283620078785", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cooltext373283704111283 {
+            get {
+                object obj = ResourceManager.GetObject("cooltext373283704111283", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -443,6 +463,26 @@ namespace UnknownVPN.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap output_onlinepngtools_2_ {
+            get {
+                object obj = ResourceManager.GetObject("output-onlinepngtools(2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Sans_titre___1 {
+            get {
+                object obj = ResourceManager.GetObject("Sans_titre_-_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap send {
             get {
                 object obj = ResourceManager.GetObject("send", resourceCulture);
@@ -466,6 +506,16 @@ namespace UnknownVPN.Properties {
         internal static System.Drawing.Bitmap tick_1_ {
             get {
                 object obj = ResourceManager.GetObject("tick(1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap unknownBanner {
+            get {
+                object obj = ResourceManager.GetObject("unknownBanner", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
